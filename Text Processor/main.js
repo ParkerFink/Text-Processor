@@ -10,6 +10,21 @@ app.get('/', function(req,res){
   res.render('index.ejs')  
 })
 
+app.post('/', function(req,res){
+  let txtDocument = {
+     title : req.body.title,
+     body : req.body.bodytxt
+  }
+  res.redirect('/')
+  console.log(txtDocument)
+})
+
+
+
+
+
+
+
 app.listen(port, ip, function(){
     console.log("Server Up...")
 })
