@@ -35,20 +35,6 @@ app.post('/', function(req,res){
 
 
 
-
-
-
-
-
-
-//this loads files from the Documents folder
-app.get('/loadFile', function(req,res){
-  res.render('loadFile.ejs')
-})
-
-
-
-
 app.listen(port, ip, function(){
     console.log("Server Up...")
 })
