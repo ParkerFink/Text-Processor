@@ -12,7 +12,10 @@ app.get('/', function(req,res){
 
 app.post('/', function(req,res){
     res.render('index.ejs')
-    
+    let page = req.body.page
+    let stringData = JSON.stringify(page)
+    fs.writeFileSync('Documents/test.py', stringData)
+
 })
 
 
