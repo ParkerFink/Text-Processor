@@ -16,7 +16,6 @@ app.post('/', function(req,res){
     let page = req.body.page
     let parseData = JSON.stringify(page)
     fs.writeFileSync('Documents/' + name + ".txt", parseData)
- 
 })
 
 
