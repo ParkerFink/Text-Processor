@@ -9,20 +9,27 @@
 <body>
     <center>
         <input type="file" id="myFile">
-        <button type="button" onclick="printFile()">Load File</button>
         <form action="/" method="post">
-            <input type="text" name ="name" value="">
+            <input type="text" name ="name" value="" placeholder="File Name">
+            <br>
             <textarea name="page" id="text" cols="100" rows="49"></textarea>
             <button type="submit">Save</button>
         </form>
     </center>
 
 
-
-
 </body>
 <script>
 
+
+var file = document.getElementById('myFile').files[0]
+
+var reader = new FileReader()
+reader.onload = function(e){
+    var textarea = document.getElementById("text")
+    textarea.value = e.target.result
+}
+reader.readAsText(file)
 
 
 
